@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Uzivatel {
     private String jmeno;
     private String prijmeni;
@@ -25,12 +27,14 @@ public class Uzivatel {
     }
 
     public void generaceEmail() {
+        Random random = new Random();
         StringBuilder sb = new StringBuilder("Jaroslav Novák");
         String vysledek = "";
+        int randomNumber = random. nextInt(900) + 100;
         for (int i = 0; i < sb.length(); i++) {
             if (Character.isWhitespace(sb.charAt(i))) {
                 sb.deleteCharAt(i);
-                sb.append("187@firma.cz");
+                sb.append(randomNumber + "@firma.cz");
                 vysledek = sb.toString();
             }
         }
@@ -65,6 +69,14 @@ public class Uzivatel {
             }
         }
         System.out.println(vysledek);
+    }
+
+    public void nahodneHeslo (){
+        int randomNum = (int)(Math.random() * 101);
+        System.out.println(randomNum);
+        StringBuilder sb = new StringBuilder("");
+        sb.append(randomNum);
+        System.out.println(sb.toString());
     }
 
     public String getJmeno() {
@@ -105,5 +117,9 @@ public class Uzivatel {
 
     public void setHeslo(String heslo) {
         this.heslo = heslo;
+    }
+    @Override
+    public String toString() {
+        return "Jméno: "+jmeno+", Příjmení: "+prijmeni+", Datum narození: "+datumNarozeni+", Email: "+email+", Heslo: "+heslo;
     }
 }

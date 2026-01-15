@@ -17,16 +17,18 @@ public class Main {
 
 
         //Úkol - Náhodná adresa
-            /*StringBuilder sb = new StringBuilder("Jaroslav Novák");
-            String vysledek = "";
-            for (int i = 0; i < sb.length(); i++) {
-                if (Character.isWhitespace(sb.charAt(i))) {
-                    sb.deleteCharAt(i);
-                    sb.append("187@firma.cz");
-                    vysledek = sb.toString();
-                }
+            /*Random random = new Random();
+        StringBuilder sb = new StringBuilder("Jaroslav Novák");
+        String vysledek = "";
+        int randomNumber = random. nextInt(900) + 100;
+        for (int i = 0; i < sb.length(); i++) {
+            if (Character.isWhitespace(sb.charAt(i))) {
+                sb.deleteCharAt(i);
+                sb.append(randomNumber + "@firma.cz");
+                vysledek = sb.toString();
             }
-            System.out.println(vysledek.toLowerCase());*/
+        }
+        System.out.println(vysledek.toLowerCase());*/
 
 
         //Úkol - Jméno
@@ -40,7 +42,7 @@ public class Main {
             System.out.println(sb.toString());*/
 
 
-        //Úkol - Zatření Emailu
+        //Úkol - Zastření Emailu
             /*StringBuilder sb = new StringBuilder("belsky.gasos-ro.cz");
             sb.replace(4, 14, "************");
             System.out.println(sb.toString());*/
@@ -58,6 +60,10 @@ public class Main {
             }
             System.out.println(vysledek);*/
 
+        //Úkol - Ultra náhodné heslo
+        /*StringBuilder sb = new StringBuilder("");
+        sb.append("nahodneHeslo_123cz.");
+        System.out.println(sb.toString());*/
 
     }
 }
